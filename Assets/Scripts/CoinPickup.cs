@@ -5,11 +5,11 @@ using UnityEngine;
 public class CoinPickup : MonoBehaviour
 {
 
-    //public ScoreKeeper keeper;
+    public ScoreKeeper keeper;
     // Start is called before the first frame update
     void Start()
     {
-        //keeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
+        keeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
     }
 
     // Update is called once per frame
@@ -19,7 +19,7 @@ public class CoinPickup : MonoBehaviour
     }
 
     void OnTriggerEnter2D (Collider2D other){
-        //keeper.CoinPickup();
+        keeper.CoinPickup();
         Destroy(gameObject);
     }
 }
